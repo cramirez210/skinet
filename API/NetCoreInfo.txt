@@ -1,0 +1,33 @@
+-- Add EntityFramework
+Using nugget package to add new package
+1. Type: Microsoft.EntityFrameworkCore
+2. Select the version of the Entity related
+    with the .net core host version installed
+    on terminal dotnet --info
+
+-- dotnet commands
+dotnet run > runs the application
+dotnet watch run > runs the application and listens for changes
+dotnet restore > clean up and restore the project
+
+dotnet tool install --global dotnet-ef > instala el tool para crear las migraciones
+
+
+-- Create migrations
+Needs Microsoft.EntityFrameworkCore.Design to run 
+MySQL.Data.EntityFrameworkCore > to run my sql 
+
+dotnet ef migrations add InitialCreate -o Data/Migrations
+
+-Creates / Updates database 
+dotnet ef database update
+
+--Create new project
+
+-- New project for class
+dotnet new classlib -o Name
+dotnet sln add Name > to add it to the solution
+From the depencendcy project: dotnet add reference path > to add the dependency to the project
+
+When the references are register, you have to restore the project
+
