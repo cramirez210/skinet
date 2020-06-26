@@ -22,6 +22,15 @@ dotnet ef migrations add InitialCreate -o Data/Migrations
 -Creates / Updates database 
 dotnet ef database update
 
+Drop the migration structure and create it again
+dotnet ef database drop -p Project -s StartupProject
+
+Remove existing migration
+dotnet ef migrations remove -p Infraestructure -s API
+
+Creando migraciones 
+dotnet ef migrations add InitialCreate -p Infraestructure -s API -o Data/Migrations
+
 --Create new project
 
 -- New project for class
