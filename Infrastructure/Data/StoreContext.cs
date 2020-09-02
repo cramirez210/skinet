@@ -14,6 +14,10 @@ namespace Infrastructure.Data
         public DbSet<ProductBrand> ProductBrands { get; set; } 
         public DbSet<ProductType> ProductTypes { get; set; }
 
+        /**
+        Override a DbContext method to use configuration for the migration
+        This method is responsable to create the migration 
+        */
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

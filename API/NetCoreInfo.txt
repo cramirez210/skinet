@@ -25,11 +25,22 @@ dotnet ef database update
 Drop the migration structure and create it again
 dotnet ef database drop -p Project -s StartupProject
 
+-- ------------------------------
 Remove existing migration
-dotnet ef migrations remove -p Infraestructure -s API
+-- -------------------------------
+dotnet ef migrations remove -p {PROJECT} -s {MAIN_PROJECT}
+dotnet ef migrations remove -p Infrastructure -s API
 
-Creando migraciones 
-dotnet ef migrations add InitialCreate -p Infraestructure -s API -o Data/Migrations
+-- -----------------------------
+List migrations 
+-- -----------------------------
+dotnet ef migrations list -p {PROJECT}
+dotnet ef migrations list -p API
+
+-- --------------------------
+Create migrations
+-- --------------------------
+dotnet ef migrations add InitialCreate -p Infrastructure -s API -o Data/Migrations
 
 --Create new project
 
