@@ -40,7 +40,7 @@ namespace Infrastructure.Data.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(maxLength: 100, nullable: false),
-                    Description = table.Column<string>(maxLength: 180, nullable: false),
+                    Description = table.Column<string>(maxLength: 500, nullable: false),
                     Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     PictureUrl = table.Column<string>(nullable: false),
                     ProductTypeId = table.Column<int>(nullable: false),

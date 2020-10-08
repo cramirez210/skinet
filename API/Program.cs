@@ -23,6 +23,9 @@ namespace API
                  // Creates the database and run the migrations in case that they don´t exists
                  var context = services.GetRequiredService<StoreContext>();
                  await context.Database.MigrateAsync();
+
+                 // Create data on the database using seeds
+                 await StoreContextSeed.SeedAsync(context, loggerFactory);
              }
              catch(Exception exception){
                 var logger = loggerFactory.CreateLogger<Program>();

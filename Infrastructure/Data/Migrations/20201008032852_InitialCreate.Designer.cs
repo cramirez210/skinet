@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Data.Migrations
 {
     [DbContext(typeof(StoreContext))]
-    [Migration("20200902005202_InitialCreate")]
+    [Migration("20201008032852_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,8 +26,8 @@ namespace Infrastructure.Data.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("varchar(180)")
-                        .HasMaxLength(180);
+                        .HasColumnType("varchar(500)")
+                        .HasMaxLength(500);
 
                     b.Property<string>("Name")
                         .IsRequired()

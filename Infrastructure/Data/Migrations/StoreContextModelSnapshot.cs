@@ -24,8 +24,8 @@ namespace Infrastructure.Data.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("varchar(180)")
-                        .HasMaxLength(180);
+                        .HasColumnType("varchar(500)")
+                        .HasMaxLength(500);
 
                     b.Property<string>("Name")
                         .IsRequired()

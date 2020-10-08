@@ -10,7 +10,7 @@ namespace Infrastructure.Data.Config
         {
             builder.Property(property => property.Id).IsRequired();
             builder.Property(property => property.Name).IsRequired().HasMaxLength(100);
-            builder.Property(property => property.Description).IsRequired().HasMaxLength(180);
+            builder.Property(property => property.Description).IsRequired().HasMaxLength(500);
             builder.Property(property => property.Price).HasColumnType("decimal(18,2)");
             builder.Property(property => property.PictureUrl).IsRequired();
 
